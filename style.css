@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 40px;
+    padding: 20px 40px;
+    border: 4px solid #de4b4b;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #de4b4b;
+    z-index: -1;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease-out;
+}
+a:hover::before{
+    transform: rotate(0);
+}
